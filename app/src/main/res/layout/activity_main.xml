@@ -191,13 +191,14 @@
         android:id="@+id/change_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:layout_marginBottom="10dp"
         android:hint="Поменять статус"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/infa4"
-        app:layout_constraintLeft_toLeftOf="@id/infa3" />
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
         android:id="@+id/infa4"
@@ -218,7 +219,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/white"
+        android:background="@drawable/signin"
         android:elevation="5dp"
         android:text="Редактировать профиль"
         android:textAllCaps="false"
@@ -237,10 +238,10 @@
         android:layout_height="35dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:background="@color/white"
         android:elevation="5dp"
         android:text="Промоакц.."
         android:textAllCaps="false"
+        android:background="@drawable/signin"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit"
@@ -252,7 +253,7 @@
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_marginTop="10dp"
-        android:background="@color/white"
+        android:background="@drawable/signin"
         android:elevation="5dp"
         android:text="Статистика"
         android:textAllCaps="false"
@@ -269,13 +270,29 @@
         android:layout_height="35dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/white"
+        android:background="@drawable/signin"
         android:elevation="5dp"
         android:text="Контакты"
         android:textAllCaps="false"
         android:textStyle="bold"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cont"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintVertical_bias="0.9"
+        android:text="Выйти из Аккаунта"
+        android:background="@drawable/signin"
+        android:textAllCaps="false"
+
+        />
 
 
     <ImageView
@@ -345,6 +362,7 @@
         app:layout_constraintTop_toBottomOf="@+id/bro"></TextView>
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:elevation="5dp"

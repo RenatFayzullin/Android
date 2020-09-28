@@ -1,14 +1,42 @@
 package com.example.instagramandroid
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var sp:SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        sp=getSharedPreferences("app", Context.MODE_PRIVATE)
+
+        if (!sp.contains("Login")){
+            sp.edit().apply {
+                putString("Login","renat_f14")
+                putString("Password","12345")
+                putBoolean("LOGGED",false).apply()
+            }
+        }
+
+        if (!sp.getBoolean("LOGGED",false)){
+            startActivity(Intent(this,SignInActivity::class.java))
+        }
+
+
+        exit.setOnClickListener {
+            sp.edit().putBoolean("LOGGED",false).apply()
+            startActivity(Intent(this,SignInActivity::class.java))
+        }
+
+
 
         var flag = true
 
