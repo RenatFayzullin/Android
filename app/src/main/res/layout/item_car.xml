@@ -15,8 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/bmw"
-        />
+        tools:src="@drawable/bmw" />
 
     <TextView
         android:id="@+id/tv_name_car"
@@ -40,5 +39,15 @@
         app:layout_constraintStart_toEndOf="@id/img_photo_car"
         app:layout_constraintTop_toBottomOf="@id/tv_name_car"
         tools:text="Germany" />
+
+    <ImageView
+        android:id="@+id/like"
+        android:layout_width="36dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/like_profile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

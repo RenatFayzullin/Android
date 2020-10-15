@@ -5,9 +5,11 @@ import androidx.recyclerview.widget.RecyclerView
 
 class CarAdapter(
     private val list: List<Car>,
-    private val itemClick : (Car)->Unit
+    private val likeClick: (Car,Int) -> Unit,
+    private val itemClick: (Car) -> Unit
 ) : RecyclerView.Adapter<CarHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarHolder = CarHolder.create(parent,itemClick)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarHolder =
+        CarHolder.create(parent,likeClick, itemClick)
 
     override fun getItemCount(): Int = list.size
 

@@ -6,5 +6,6 @@ data class Car (
     val country : String,
     val photo : Int,
     val photoProfile : Int,
-    val bio : String
+    val bio : String,
+    var like : Int
 )
