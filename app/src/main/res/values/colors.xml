@@ -7,6 +7,15 @@
     <color name="white">#FFF</color>
     <color name="black">#000000</color>
     <color name="blue">#3F51B5</color>
+    <color name="blueish">#496DF1</color>
+    <color name="green">#16F11A</color>
+    <color name="yellow">#F1E616</color>
+    <color name="orange">#EF9C0B</color>
+    <color name="red">#EF0B0B</color>
+
+
+
+
 
 
 </resources>
